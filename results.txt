@@ -1,0 +1,68 @@
+** Pattern 1: creating 6 processes
+Parent: created child 0 (pid 49819)
+Process 0 (pid 49819) created: will sleep for 7 seconds
+Parent: created child 1 (pid 49820)
+Process 1 (pid 49820) created: will sleep for 6 seconds
+Parent: created child 2 (pid 49821)
+Process 2 (pid 49821) created: will sleep for 7 seconds
+Parent: created child 3 (pid 49822)
+Process 3 (pid 49822) created: will sleep for 2 seconds
+Parent: created child 4 (pid 49823)
+Process 4 (pid 49823) created: will sleep for 4 seconds
+Parent: created child 5 (pid 49824)
+** Pattern 1: All processes created
+Process 5 (pid 49824) created: will sleep for 6 seconds
+Process 3 (pid 49822): exiting
+Process 4 (pid 49823): exiting
+Process 1 (pid 49820): exiting
+Process 5 (pid 49824): exiting
+Process 0 (pid 49819): exiting
+Process 2 (pid 49821): exiting
+** Pattern 1: All children have exited
+
+
+
+
+** Pattern 2: creating 13 processes
+Parent: created child 0 (pid 50056)
+Child 0 (pid 50056): starting
+Child 0 (pid 50056), sleeping 2 seconds after creating child 1
+Child 1 (pid 50057), sleeping 5 seconds after creating child 2
+Child 2 (pid 50058), sleeping 5 seconds after creating child 3
+Child 3 (pid 50059), sleeping 4 seconds after creating child 4
+Child 4 (pid 50060), sleeping 7 seconds after creating child 5
+Child 5 (pid 50061), sleeping 1 seconds after creating child 6
+Child 6 (pid 50062), sleeping 4 seconds after creating child 7
+Child 7 (pid 50063), sleeping 6 seconds after creating child 8
+Child 8 (pid 50064), sleeping 4 seconds after creating child 9
+Child 9 (pid 50065), sleeping 2 seconds after creating child 10
+Child 10 (pid 50066), sleeping 1 seconds after creating child 11
+Child 11 (pid 50067), sleeping 4 seconds after creating child 12
+Child 12 (pid 50068) [no children created] sleeping 4 seconds
+Child 5 (pid 50061), waiting for child 6 (pid 50062)
+Child 10 (pid 50066), waiting for child 11 (pid 50067)
+Child 0 (pid 50056), waiting for child 1 (pid 50057)
+Child 9 (pid 50065), waiting for child 10 (pid 50066)
+Child 3 (pid 50059), waiting for child 4 (pid 50060)
+Child 6 (pid 50062), waiting for child 7 (pid 50063)
+Child 8 (pid 50064), waiting for child 9 (pid 50065)
+Child 11 (pid 50067), waiting for child 12 (pid 50068)
+Child 12 (pid 50068) exiting.
+Child 11 (pid 50067) exiting.
+Child 10 (pid 50066) exiting.
+Child 9 (pid 50065) exiting.
+Child 8 (pid 50064) exiting.
+Child 1 (pid 50057), waiting for child 2 (pid 50058)
+Child 2 (pid 50058), waiting for child 3 (pid 50059)
+Child 7 (pid 50063), waiting for child 8 (pid 50064)
+Child 7 (pid 50063) exiting.
+Child 6 (pid 50062) exiting.
+Child 5 (pid 50061) exiting.
+Child 4 (pid 50060), waiting for child 5 (pid 50061)
+Child 4 (pid 50060) exiting.
+Child 3 (pid 50059) exiting.
+Child 2 (pid 50058) exiting.
+Child 1 (pid 50057) exiting.
+Child 0 (pid 50056) exiting.
+Parent: child 0 (pid 50056) has exited
+** Pattern 2: All children have exited
